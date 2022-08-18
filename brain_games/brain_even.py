@@ -1,10 +1,14 @@
 import prompt
 from random import randint
+import brain_games.user_interaction
 
 
 START = 1
 END = 999
 NUM_OF_ROUNDS = 3
+TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
+user_anser = ''
+correct_anser = ''
 
 
 def is_even(num):
@@ -13,16 +17,18 @@ def is_even(num):
     return False
 
 
-def greeting():
-    print('Welcome to the Brain Games!')
-    user_name = prompt.string('May I have your name? ')
-    print(f'Hello, {user_name}!')
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    return user_name
+def is_correct(user_anser, num):
+    if is_even(num) and user_anser == 'yes':
+        print('Correct!')
+        return True
+    elif not is_even(num) and user_anser == 'no':
+        print('Correct!')
+        return True
+    return False
 
 
 def brain_even():
-    name = greeting()
+    name = brain_games.user_interaction.greeting(TASK)
 
     wrong_count = 0
     correct_count = 0
@@ -32,21 +38,16 @@ def brain_even():
         random_num = randint(START, END)
         print(f'Question: {random_num}')
         user_anser = prompt.string('Your answer: ')
-        if (is_even(random_num) and user_anser == 'yes'):
-            print('Correct!')
-            correct_count += 1
-        elif not is_even(random_num) and user_anser == 'no':
-            print('Correct!')
+        if is_correct(user_anser, random_num):
             correct_count += 1
         else:
-            if is_even(random_num):
-                correct_anser = 'yes'
-            else:
-                correct_anser = 'no'
-            print(f"'{user_anser}' is wrong answer ;(. "
-                  f"Correct answer was '{correct_anser}'.")
-            print(f"Let's try again, {name}!")
             wrong_count += 1
 
     if wrong_count == 0:
-        print(f'Congratulations, {name}!')
+        brain_games.user_interaction.win(name)
+    else:
+        if is_even(random_num):
+            correct_anser = 'yes'
+        else:
+            correct_anser = 'no'
+        brain_games.user_interaction.loss(user_anser, correct_anser, name)
