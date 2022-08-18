@@ -13,10 +13,16 @@ def is_even(num):
     return False
 
 
-def brain_even():
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
+def greeting():
+    print('Welcome to the Brain Games!')
+    user_name = prompt.string('May I have your name? ')
+    print(f'Hello, {user_name}!')
     print('Answer "yes" if the number is even, otherwise answer "no".')
+    return user_name
+
+
+def brain_even():
+    name = greeting()
 
     wrong_count = 0
     correct_count = 0

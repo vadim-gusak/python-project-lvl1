@@ -2,12 +2,7 @@
 from brain_games.brain_even import brain_even
 
 
-def greeting():
-    print('Welcome to the Brain Games!')
-
-
 def main():
-    greeting()
     brain_even()
 
 
