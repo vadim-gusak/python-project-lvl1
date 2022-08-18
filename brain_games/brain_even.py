@@ -7,8 +7,6 @@ START = 1
 END = 999
 NUM_OF_ROUNDS = 3
 TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
-user_anser = ''
-correct_anser = ''
 
 
 def is_even(num):
@@ -39,7 +37,6 @@ def brain_even():
 
     wrong_count = 0
     correct_count = 0
-    correct_anser = ''
 
     while wrong_count == 0 and correct_count < NUM_OF_ROUNDS:
         random_num = randint(START, END)
