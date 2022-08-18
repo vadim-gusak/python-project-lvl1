@@ -24,7 +24,14 @@ def is_correct(user_anser, num):
     elif not is_even(num) and user_anser == 'no':
         print('Correct!')
         return True
+
     return False
+
+
+def correct_anser_func(num):
+    if is_even(num):
+        return 'yes'
+    return 'no'
 
 
 def brain_even():
@@ -42,12 +49,9 @@ def brain_even():
             correct_count += 1
         else:
             wrong_count += 1
+            correct_anser = correct_anser_func(random_num)
 
     if wrong_count == 0:
         brain_games.user_interaction.win(name)
     else:
-        if is_even(random_num):
-            correct_anser = 'yes'
-        else:
-            correct_anser = 'no'
         brain_games.user_interaction.loss(user_anser, correct_anser, name)
