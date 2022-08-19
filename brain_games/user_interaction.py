@@ -4,6 +4,8 @@ import prompt
 CALC_GAME = 'brain_calc'
 EVEN_GAME = 'even_game'
 GCD_GAME = 'gcd_game'
+PROG_GAME = 'prog_game'
+PRIME_GAME = 'prime_game'
 
 
 def greeting():
@@ -37,3 +39,7 @@ def task(game_num):
         print('What is the result of the expression?')
     if game_num == GCD_GAME:
         print('Find the greatest common divisor of given numbers.')
+    if game_num == PROG_GAME:
+        print('What number is missing in the progression?')
+    if game_num == PRIME_GAME:
+        print('Answer "yes" if given number is prime. Otherwise answer "no".')

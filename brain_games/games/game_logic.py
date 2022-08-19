@@ -3,6 +3,7 @@ import brain_games.games.brain_even
 import brain_games.games.brain_calc
 import brain_games.games.brain_gcd
 import brain_games.games.brain_progression
+import brain_games.games.brain_prime
 import prompt
 
 
@@ -10,6 +11,7 @@ CALC_GAME = 'brain_calc'
 EVEN_GAME = 'even_game'
 GCD_GAME = 'gcd_game'
 PROG_GAME = 'prog_game'
+PRIME_GAME = 'prime_game'
 
 NUM_OF_ROUNDS = 3
 
@@ -24,6 +26,8 @@ def play(game_num):
         anser = brain_games.games.brain_gcd.brain_gcd()
     if game_num == PROG_GAME:
         anser = brain_games.games.brain_progression.brain_progression()
+    if game_num == PRIME_GAME:
+        anser = brain_games.games.brain_prime.brain_prime()
     return anser
 
 
