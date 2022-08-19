@@ -15,7 +15,7 @@ def brain_progression():
     prog_length = randint(LENGTH_START, LENGTH_END)
     rand_num = randint(LENGTH_START, prog_length)
     index = 1
-    question = ''
+    question = 'Question: '
     anser = ''
     while index <= prog_length:
         if index != rand_num:
