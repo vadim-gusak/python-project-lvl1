@@ -1,6 +1,7 @@
 import brain_games.user_interaction
 import brain_games.games.brain_even
 import brain_games.games.brain_calc
+import brain_games.games.brain_gcd
 
 
 CALC_GAME = 'brain_calc'
@@ -17,3 +18,6 @@ def game(game_num):
     if game_num == CALC_GAME:
         print('What is the result of the expression?')
         brain_games.games.brain_calc.brain_calc(name)
+    if game_num == GCD_GAME:
+        print('Find the greatest common divisor of given numbers.')
+        brain_games.games.brain_gcd.brain_gcd(name)

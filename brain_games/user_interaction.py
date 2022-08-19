@@ -16,3 +16,10 @@ def loss(user_anser, correct_anser, user_name):
 
 def win(user_name):
     print(f'Congratulations, {user_name}!')
+
+
+def end(name, wrong_count, user_anser, correct_anser):
+    if wrong_count == 0:
+        win(name)
+    else:
+        loss(user_anser, correct_anser, name)

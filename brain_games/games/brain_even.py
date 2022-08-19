@@ -1,6 +1,6 @@
 import prompt
 from random import randint
-import brain_games.user_interaction
+from brain_games.user_interaction import end
 
 
 START = 1
@@ -25,7 +25,7 @@ def is_correct(user_anser, num):
     return False
 
 
-def correct_anser_func(num):
+def corr_anser(num):
     if is_even(num):
         return 'yes'
     return 'no'
@@ -40,13 +40,10 @@ def brain_even(name):
         random_num = randint(START, END)
         print(f'Question: {random_num}')
         user_anser = prompt.string('Your answer: ')
+        correct_anser = corr_anser(random_num)
         if is_correct(user_anser, random_num):
             correct_count += 1
         else:
             wrong_count += 1
-            correct_anser = correct_anser_func(random_num)
 
-    if wrong_count == 0:
-        brain_games.user_interaction.win(name)
-    else:
-        brain_games.user_interaction.loss(user_anser, correct_anser, name)
+    end(name, wrong_count, user_anser, correct_anser)

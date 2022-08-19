@@ -1,6 +1,6 @@
 import prompt
 from random import choice, randint
-import brain_games.user_interaction
+from brain_games.user_interaction import end
 
 
 START = 1
@@ -9,7 +9,7 @@ NUM_OF_ROUNDS = 3
 OPERATORS = ('+', '-', '*')
 
 
-def correct_anser_func(first, second, operator):
+def corr_anser(first, second, operator):
     anser = 0
     if operator == '+':
         anser = first + second
@@ -39,15 +39,10 @@ def brain_calc(name):
         question = (f'{random_first} {random_operator} {random_second}')
         print(f'Question: {question}')
         user_anser = prompt.string('Your answer: ')
-        correct_anser = correct_anser_func(random_first, random_second, random_operator)
+        correct_anser = corr_anser(random_first, random_second, random_operator)
         if is_correct(user_anser, correct_anser):
             correct_count += 1
         else:
             wrong_count += 1
 
-
-    if wrong_count == 0:
-        brain_games.user_interaction.win(name)
-    else:
-        brain_games.user_interaction.loss(user_anser, correct_anser, name)
-
+    end(name, wrong_count, user_anser, correct_anser)
