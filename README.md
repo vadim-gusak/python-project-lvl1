@@ -14,10 +14,10 @@
 python3 -m pip install --user dist/hexlet_code-0.1.0-py3-none-any.whl
 
 После установки игры можно запустить следующими командами:
-brain-even
-brain-calc
-brain-gcd
-brain-progression
+brain-even,
+brain-calc,
+brain-gcd,
+brain-progression,
 brain-prime
 
 Ниже вы можете увидеть примеры запуска и работы игр:
