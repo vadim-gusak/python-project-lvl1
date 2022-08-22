@@ -32,5 +32,5 @@ def end(user_name, wrong_count, user_anser, correct_anser):
         print(f'Congratulations, {user_name}!')
     else:
         print(f"'{user_anser}' is wrong answer ;(. "
-        f"Correct answer was '{correct_anser}'.")
+              f"Correct answer was '{correct_anser}'.")
         print(f"Let's try again, {user_name}!")
