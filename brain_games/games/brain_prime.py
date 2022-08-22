@@ -16,7 +16,7 @@ def is_prime(num):
     return True
 
 
-def brain_prime():
+def main():
     num = randint(START, END)
     print(f'Question: {num}')
     anser = ''
@@ -25,3 +25,7 @@ def brain_prime():
     else:
         anser = 'no'
     return anser
+
+
+def task():
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')

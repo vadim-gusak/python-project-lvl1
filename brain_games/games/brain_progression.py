@@ -9,7 +9,7 @@ LENGTH_START = 5
 LENGTH_END = 10
 
 
-def brain_progression():
+def main():
     sum = randint(START, END)
     add_num = randint(DIFF_START, DIFF_END)
     prog_length = randint(LENGTH_START, LENGTH_END)
@@ -28,3 +28,7 @@ def brain_progression():
         index += 1
     print(question.strip())
     return anser
+
+
+def task():
+    print('What number is missing in the progression?')

@@ -17,9 +17,12 @@ def corr_anser(num):
     return 'no'
 
 
-def brain_even():
-
+def main():
     random_num = randint(START, END)
     print(f'Question: {random_num}')
     correct_anser = corr_anser(random_num)
     return correct_anser
+
+
+def task():
+    print('Answer "yes" if the number is even, otherwise answer "no".')

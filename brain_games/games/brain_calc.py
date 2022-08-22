@@ -17,8 +17,7 @@ def corr_anser(first, second, operator):
     return anser
 
 
-def brain_calc():
-
+def main():
     random_first = randint(START, END)
     random_second = randint(START, END)
     random_operator = choice(OPERATORS)
@@ -26,3 +25,7 @@ def brain_calc():
     print(f'Question: {question}')
     correct_anser = corr_anser(random_first, random_second, random_operator)
     return correct_anser
+
+
+def task():
+    print('What is the result of the expression?')

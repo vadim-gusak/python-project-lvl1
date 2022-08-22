@@ -13,8 +13,7 @@ def corr_anser(first, second):
         return corr_anser(second, first % second)
 
 
-def brain_gcd():
-
+def main():
     random_num = randint(START, END)
     random_mul_first = randint(MULTIPLE_MIN, MULTIPLE_MAX)
     random_mul_second = randint(MULTIPLE_MIN, MULTIPLE_MAX)
@@ -23,3 +22,7 @@ def brain_gcd():
     print(f'Question: {first_num} {second_num}')
     correct_anser = corr_anser(first_num, second_num)
     return correct_anser
+
+
+def task():
+    print('Find the greatest common divisor of given numbers.')
