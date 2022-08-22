@@ -1,11 +1,20 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Several puzzle games."
 authors = ["Vadim Gusak <gusakvd@gmail.com>"]
 packages = [
   {include = "brain_games"},
 ]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "Natural Language :: Russian",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Games/Entertainment :: Puzzle Games"
+]
+repository = "https://github.com/vadim-gusak/python-project-lvl1.git"
 
 [tool.poetry.dependencies]
 python = "^3.10"
