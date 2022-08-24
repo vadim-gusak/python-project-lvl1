@@ -4,6 +4,7 @@ START = 1
 END = 10
 MULTIPLE_MIN = 2
 MULTIPLE_MAX = 10
+TASK = 'Find the greatest common divisor of given numbers.'
 
 
 def corr_anser(first, second):
@@ -19,10 +20,6 @@ def main():
     random_mul_second = randint(MULTIPLE_MIN, MULTIPLE_MAX)
     first_num = random_num * random_mul_first
     second_num = random_num * random_mul_second
-    print(f'Question: {first_num} {second_num}')
+    question = f'{first_num} {second_num}'
     correct_anser = corr_anser(first_num, second_num)
-    return correct_anser
-
-
-def task():
-    print('Find the greatest common divisor of given numbers.')
+    return (question, str(correct_anser))

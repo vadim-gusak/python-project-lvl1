@@ -3,6 +3,7 @@ from random import randint
 
 START = 1
 END = 100
+TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(num):
@@ -17,15 +18,8 @@ def is_prime(num):
 
 
 def main():
-    num = randint(START, END)
-    print(f'Question: {num}')
-    anser = ''
-    if is_prime(num):
+    question = randint(START, END)
+    anser = 'no'
+    if is_prime(question):
         anser = 'yes'
-    else:
-        anser = 'no'
-    return anser
-
-
-def task():
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    return (question, anser)
