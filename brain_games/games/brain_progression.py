@@ -21,7 +21,7 @@ def create_question(prog_length, start_term, difference, rand_num):
     question = ''
     while index <= prog_length:
         if index == rand_num:
-            question = f'{question} ...'
+            question = f'{question} ..'
         else:
             question = f'{question} {calc_term(start_term, difference, index)}'
         index += 1
