@@ -17,9 +17,9 @@ def is_prime(num):
     return True
 
 
-def main():
+def question_and_answer():
     question = randint(START, END)
-    anser = 'no'
+    answer = 'no'
     if is_prime(question):
-        anser = 'yes'
-    return (question, anser)
+        answer = 'yes'
+    return (question, answer)

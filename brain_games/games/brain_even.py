@@ -6,9 +6,15 @@ END = 999
 TASK = 'Answer "yes" if the number is even, otherwise answer "no"'
 
 
-def main():
+def is_even(num):
+    if num % 2 == 0:
+        return True
+    return False
+
+
+def question_and_answer():
     question = randint(START, END)
-    correct_anser = 'no'
-    if question % 2 == 0:
-        correct_anser = 'yes'
-    return (question, correct_anser)
+    correct_answer = 'no'
+    if is_even(question):
+        correct_answer = 'yes'
+    return (question, correct_answer)
