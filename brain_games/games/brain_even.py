@@ -7,9 +7,7 @@ TASK = 'Answer "yes" if the number is even, otherwise answer "no"'
 
 
 def is_even(num):
-    if num % 2 == 0:
-        return True
-    return False
+    return num % 2 == 0
 
 
 def question_and_answer():
@@ -17,4 +15,4 @@ def question_and_answer():
     correct_answer = 'no'
     if is_even(question):
         correct_answer = 'yes'
-    return (question, correct_answer)
+    return question, correct_answer

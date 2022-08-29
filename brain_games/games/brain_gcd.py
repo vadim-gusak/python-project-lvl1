@@ -7,11 +7,11 @@ MULTIPLE_MAX = 10
 TASK = 'Find the greatest common divisor of given numbers.'
 
 
-def corr_answer(first, second):
+def calculate_gcd(first, second):
     if second == 0:
         return first
     else:
-        return corr_answer(second, first % second)
+        return calculate_gcd(second, first % second)
 
 
 def question_and_answer():
@@ -21,5 +21,5 @@ def question_and_answer():
     first_num = random_num * random_mul_first
     second_num = random_num * random_mul_second
     question = f'{first_num} {second_num}'
-    correct_answer = corr_answer(first_num, second_num)
-    return (question, str(correct_answer))
+    correct_answer = calculate_gcd(first_num, second_num)
+    return question, str(correct_answer)

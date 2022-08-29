@@ -11,12 +11,11 @@ def question_and_answer():
     random_first = randint(START, END)
     random_second = randint(START, END)
     random_operator = choice(OPERATORS)
-    question = (f'{random_first} {random_operator} {random_second}')
-    correct_answer = 0
+    question = f'{random_first} {random_operator} {random_second}'
     if random_operator == '+':
         correct_answer = random_first + random_second
     elif random_operator == '-':
         correct_answer = random_first - random_second
     else:
         correct_answer = random_first * random_second
-    return (question, str(correct_answer))
+    return question, str(correct_answer)

@@ -22,4 +22,4 @@ def question_and_answer():
     answer = 'no'
     if is_prime(question):
         answer = 'yes'
-    return (question, answer)
+    return question, answer
