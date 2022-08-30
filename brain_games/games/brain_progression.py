@@ -17,6 +17,7 @@ def calc_term(initial_term, difference, n):
 
 
 def create_question(progression, rand_num):
+    progression = progression[:]
     progression[rand_num - 1] = '..'
     question = " ".join(progression)
     return question
