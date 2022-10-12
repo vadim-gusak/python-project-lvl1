@@ -3,7 +3,7 @@ from random import randint
 
 START = 1
 END = 999
-TASK = 'Answer "yes" if the number is even, otherwise answer "no"'
+TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def is_even(num):
